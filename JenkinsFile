@@ -24,6 +24,9 @@ pipeline {
             steps {
                 sh'''
                     echo "Test stage"
+                    if test -f "build/index.html"; then
+                        echo "index file exists"
+                    fi
              '''
             }
         }
